@@ -59,7 +59,7 @@ public static float llegirFloat(String missatge) {
 			num = sc.nextFloat();
 			correcte = true;
 		} catch (InputMismatchException e) {
-			System.out.println("Error de format");
+			System.out.println("Error de format, has probat a introduir el numero amb , en comptes de . ? ");
 		} finally {
 			sc.nextLine();
 		}
