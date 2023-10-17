@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Venda {
 	private  ArrayList<Producte> productes = new ArrayList<Producte>();
+	private float preuTotal;
 
 
 	public  ArrayList<Producte> getProductes() {
@@ -13,16 +14,15 @@ public class Venda {
 
 	public void calcularTotal() throws VendaBuidaException {
 
-		float sumaPreu = 0;
 
 		if (productes.size() == 0) {
 			throw new VendaBuidaException("Per fer una venda primer has d’afegir productes!!");
 		}
 		else {
 			for(int i = 0; i < productes.size(); i++) {
-				sumaPreu = sumaPreu +  productes.get(i).getPreuVenda();		    	  
+				this.preuTotal = this.preuTotal +  productes.get(i).getPreuVenda();		    	  
 			}
-			System.out.println(sumaPreu+" Euros.");
+			System.out.println(this.preuTotal+" Euros.");
 		}
 	}
 
