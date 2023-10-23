@@ -1,8 +1,8 @@
 package n1ex01;
 
 public class Producte {
-	protected String nom;
-	protected float preuVenda;
+	private String nom;
+	private float preuVenda;
 	
 	public Producte(String nom, float preuVenda) {
 		super();
